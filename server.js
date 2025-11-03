@@ -3,9 +3,10 @@ const express = require("express");
 const connectDB = require("./db"); //  imported correctly
 const Person = require("./models/Person");
 const bodyParser = require("body-parser");
+require('dotenv').config()
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 3000;
 
 // connect to MongoDB
 connectDB(); //  call the function — don't use `db` here
